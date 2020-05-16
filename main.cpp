@@ -114,6 +114,7 @@ public:
         string kuka;
         getline(ss,kuka,'/');
         getline(ss,_author, '_');
+
     }
     string author() const {return _author;}
     string name() const {return _name;}
@@ -123,7 +124,7 @@ public:
         int sum=0;
         vector<string> vs;
         for (string s : _content) {
-            if (trim(s)=="{" || trim(s)=="}" || trim(s)=="else" || trim(s)=="break;") continue;
+            if (trim(s)=="" || trim(s)=="{" || trim(s)=="}" || trim(s)=="else" || trim(s)=="break;") continue;
 
             for (string sk : m._content) {
                 if (s==sk) {
